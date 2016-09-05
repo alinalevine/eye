@@ -8,4 +8,6 @@ lensgrade<-read.csv("lensgrade.csv")
 
 eye<-lensgrade[lensgrade$Visit=="Baseline", 1:5]
 
-eye<-eye[order(eye$PtId), ]
+eye<-eye[order(eye$PtID), ]
+
+print(duplicated(eye$PtID))
